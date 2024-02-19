@@ -7,21 +7,20 @@ public class ConsumerExample {
 
     public static void main(String[] args) {
         Consumer<String> c = (x) -> System.out.println(x.length() + " the value of x: " + x);
-        c.accept("Up in the air");
+        c.accept("Helio Mora");
 
         //Consumer with block statement
         Consumer<Integer> d = (x) -> {
             System.out.println("x*x = " + (x * x));
             System.out.println("x+x = " + (x + x));
         };
-        d.accept(10);
-        
-        //Consumer with block statement
-        BiConsumer<Integer, Integer> e = (x, y) -> {
-            System.out.println("x*x = " + (x * y));
-            System.out.println("x+x = " + (x + y));
+        Integer veinte = 20;
+
+        Consumer<Integer> e = (x) -> {
+            System.out.println("x*20 = " + (x * veinte));
+            System.out.println("x+20 = " + (x + veinte));
         };
-        e.accept(10, 5);
+        d.andThen(e).accept(10);
     }
 
 }

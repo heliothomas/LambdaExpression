@@ -1,9 +1,10 @@
 package com.modernjava.lambda;
 
-public class ConcetanateTraditional implements  ConcatenateInterface{
+public class ConcetanateTraditional implements ConcatenateInterface {
+
     @Override
     public String sconcat(String a, String b) {
-        return a + " "  + b;
+        return a + " " + b;
     }
 
     public static void main(String[] args) {
@@ -11,4 +12,5 @@ public class ConcetanateTraditional implements  ConcatenateInterface{
         System.out.println(concetanateTraditional.sconcat("Hello", "World"));
 
     }
+
 }

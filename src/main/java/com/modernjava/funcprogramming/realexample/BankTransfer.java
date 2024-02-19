@@ -1,6 +1,5 @@
 package com.modernjava.funcprogramming.realexample;
 
-import java.util.concurrent.Executor;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
@@ -8,6 +7,7 @@ import java.util.function.BiConsumer;
 import java.util.function.BiPredicate;
 
 public class BankTransfer {
+
     public static void main(String[] args) {
         AccountFactory accountFactory = BankAccount::new;
         BankAccount studentBankAccount = accountFactory.getBankAccount(1, 50000, "StudentA");
@@ -15,9 +15,9 @@ public class BankTransfer {
 
         BiPredicate<Double, Double> p1 = (balance, amount) -> balance > amount;
         BiConsumer<String, Double> printer = (x, y) -> System.out.println(x + y);
-        BiConsumer<BankAccount, BankAccount> printer2 = (student, university) ->
-                System.out.println("Ending balance of student account: " + studentBankAccount.getBalance() +
-                        " University account: " + universityBankAccount.getBalance());
+        BiConsumer<BankAccount, BankAccount> printer2 = (student, university)
+                -> System.out.println("Ending balance of student account: " + studentBankAccount.getBalance()
+                        + " University account: " + universityBankAccount.getBalance());
 
         ExecutorService service = Executors.newFixedThreadPool(10);
 
@@ -54,5 +54,5 @@ public class BankTransfer {
         }
         printer2.accept(studentBankAccount, universityBankAccount);
     }
-}
 
+}

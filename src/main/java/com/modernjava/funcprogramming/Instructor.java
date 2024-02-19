@@ -3,6 +3,7 @@ package com.modernjava.funcprogramming;
 import java.util.List;
 
 public class Instructor {
+
     String name;
     int yearsOfExperience;
     String title;
@@ -19,17 +20,16 @@ public class Instructor {
         this.courses = courses;
     }
 
-
     @Override
     public String toString() {
-        return "Instructor{" +
-                "name='" + name + '\'' +
-                ", yearsOfExperience=" + yearsOfExperience +
-                ", title='" + title + '\'' +
-                ", gender='" + gender + '\'' +
-                ", onlineCourses=" + onlineCourses +
-                ", courses=" + courses +
-                '}';
+        return "Instructor{"
+                + "name='" + name + '\''
+                + ", yearsOfExperience=" + yearsOfExperience
+                + ", title='" + title + '\''
+                + ", gender='" + gender + '\''
+                + ", onlineCourses=" + onlineCourses
+                + ", courses=" + courses
+                + '}';
     }
 
     public String getName() {

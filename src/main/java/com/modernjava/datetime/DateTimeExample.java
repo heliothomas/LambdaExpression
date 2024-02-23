@@ -9,17 +9,18 @@ import java.util.Calendar;
 import java.util.Date;
 
 public class DateTimeExample {
+
     public static void main(String[] args) {
         //Date and simpledateformatter
         Date dateObj = new Date();
         DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
         System.out.println("df.format(dateObj) = " + df.format(dateObj));
-        
+
         df = new SimpleDateFormat("HH:mm:ss");
         System.out.println("df.format(dateObj) = " + df.format(dateObj));
 
-        System.out.println(Calendar.getInstance().getTime()); 
-        
+        System.out.println(Calendar.getInstance().getTime());
+
         //LocalDate
         LocalDate localDate = LocalDate.now();
         System.out.println("localDate = " + localDate);
@@ -29,7 +30,6 @@ public class DateTimeExample {
         //LocalDateTime
         LocalDateTime localDateTime = LocalDateTime.now();
         System.out.println("localDateTime = " + localDateTime);
-        
-
     }
+
 }

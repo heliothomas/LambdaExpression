@@ -5,14 +5,15 @@ import java.util.stream.DoubleStream;
 import java.util.stream.LongStream;
 
 public class DoubleStreamExample {
+
     public static void main(String[] args) {
         //of
-        DoubleStream numbers = DoubleStream.of(1.2,2.2,3.3,4.4,5.5);
+        DoubleStream numbers = DoubleStream.of(1.2, 2.2, 3.3, 4.4, 5.5);
         numbers.forEach(System.out::println);
         System.out.println("--------------");
 
         //iterate
-        numbers = DoubleStream.iterate(0,i->i+2.0).limit(5);
+        numbers = DoubleStream.iterate(0, i -> i + 2.0).limit(5);
         numbers.forEach(System.out::println);
         System.out.println("--------------");
 
@@ -22,13 +23,14 @@ public class DoubleStreamExample {
         System.out.println("--------------");
 
         //range
-        numbers = LongStream.range(1,5).asDoubleStream();
+        numbers = LongStream.range(1, 5).asDoubleStream();
         numbers.forEach(System.out::println);
         System.out.println("--------------");
 
         //rangeClosed
-        numbers = LongStream.rangeClosed(1,5).asDoubleStream();
+        numbers = LongStream.rangeClosed(1, 5).asDoubleStream();
         numbers.forEach(System.out::println);
         System.out.println("--------------");
     }
+
 }

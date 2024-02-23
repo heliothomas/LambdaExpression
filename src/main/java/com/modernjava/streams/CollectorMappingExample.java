@@ -8,6 +8,7 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 public class CollectorMappingExample {
+
     public static void main(String[] args) {
         //map
         List<String> namesList = Instructors.getAll().stream()
@@ -16,7 +17,7 @@ public class CollectorMappingExample {
         namesList.forEach(System.out::println);
 
         //mapping
-        namesList= Instructors.getAll().stream()
+        namesList = Instructors.getAll().stream()
                 .collect(Collectors.mapping(Instructor::getName, Collectors.toList()));
 
         namesList.forEach(System.out::println);
@@ -26,14 +27,9 @@ public class CollectorMappingExample {
                 .collect(Collectors.groupingBy(Instructor::getYearsOfExperience,
                         Collectors.mapping(Instructor::getName, Collectors.toList())));
 
-        mapYearsOfExperienceAndNames.forEach((key,value) ->{
+        mapYearsOfExperienceAndNames.forEach((key, value) -> {
             System.out.println("key = " + key + " value = " + value);
         });
-
-
-
-
-
-
     }
+
 }

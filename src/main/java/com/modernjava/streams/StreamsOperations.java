@@ -9,6 +9,7 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 public class StreamsOperations {
+
     public static void main(String[] args) {
         //count   distinct
         Long count = Instructors.getAll().stream()
@@ -28,17 +29,12 @@ public class StreamsOperations {
         System.out.println(courses);
 
         //anymatch, allmatch and nonmatch
-
-
         boolean match = Instructors.getAll().stream()
                 .map(Instructor::getCourses)
                 .flatMap(List::stream)
                 .noneMatch(s -> s.startsWith("J"));
 
         System.out.println(match);
-
-
-
-
     }
+
 }

@@ -8,8 +8,9 @@ import java.util.stream.IntStream;
 import java.util.stream.LongStream;
 
 public class MapToObjLongDoubleExample {
+
     public static void main(String[] args) {
-        List<RandomIds> randomIds = IntStream.rangeClosed(0,5)
+        List<RandomIds> randomIds = IntStream.rangeClosed(0, 5)
                 .mapToObj((i) -> {
                     return new RandomIds(i, ThreadLocalRandom.current().nextInt(100));
                 }).collect(Collectors.toList());
@@ -17,16 +18,17 @@ public class MapToObjLongDoubleExample {
         randomIds.forEach(System.out::println);
         System.out.println("------------");
 
-        LongStream longStream = IntStream.rangeClosed(0,5).mapToLong(i -> (long)i);
+        LongStream longStream = IntStream.rangeClosed(0, 5).mapToLong(i -> (long) i);
         longStream.forEach(System.out::println);
         System.out.println("------------");
 
-        DoubleStream doubleStream = LongStream.rangeClosed(0,5).mapToDouble(i -> (double)i);
+        DoubleStream doubleStream = LongStream.rangeClosed(0, 5).mapToDouble(i -> (double) i);
         doubleStream.forEach(System.out::println);
     }
 }
 
-class RandomIds{
+class RandomIds {
+
     int id;
     int randomNumbers;
 
@@ -37,9 +39,10 @@ class RandomIds{
 
     @Override
     public String toString() {
-        return "RandomIds{" +
-                "id=" + id +
-                ", randomNumbers=" + randomNumbers +
-                '}';
+        return "RandomIds{"
+                + "id=" + id
+                + ", randomNumbers=" + randomNumbers
+                + '}';
     }
+
 }

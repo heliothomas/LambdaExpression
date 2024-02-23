@@ -1,14 +1,17 @@
-package com.modernjava.java9improvements;
+package com.modernjava.java11;
 
 public class SwitchStatementExample {
+
     public static void main(String[] args) {
-        String month="JANUARY";
-        String quarter;
-        switch (month){
+        //Traditional example in Java 8
+        final String month = "JANUARY";
+        final String quarter;
+
+        switch (month) {
             case "JANUARY":
                 quarter = "FIRST QUARTER";
                 break;
-            case "FEBURARY":
+            case "FEBRUARY":
                 quarter = "FIRST QUARTER";
                 break;
             case "MARCH":
@@ -22,6 +25,7 @@ public class SwitchStatementExample {
                 break;
             case "JUNE":
                 quarter = "SECOND QUARTER";
+                break;
             case "JULY":
                 quarter = "THIRD QUARTER";
                 break;
@@ -41,9 +45,10 @@ public class SwitchStatementExample {
                 quarter = "FOURTH QUARTER";
                 break;
             default:
-                quarter= "UNKNOWN QUARTER";
+                quarter = "UNKNOWN QUARTER";
                 break;
         }
         System.out.println("quarter = " + quarter);
     }
+
 }

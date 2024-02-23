@@ -1,0 +1,5 @@
+
+Java 9 introdujo jshell (REPL)
+Y la creacion de Modular Application, todos sus paquetes se subdividieron.
+
+

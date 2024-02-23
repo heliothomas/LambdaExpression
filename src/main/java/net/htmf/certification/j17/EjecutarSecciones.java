@@ -1,5 +1,7 @@
 package net.htmf.certification.j17;
 
+import java.util.List;
+
 /**
  *
  * @author Helio Mora
@@ -25,6 +27,18 @@ public class EjecutarSecciones {
         //seccion 12. Optional
         //seccion 13. Default Methods (introduced in java8)
         //seccion 14. New DateTime apis
+        //seccion 15. +Java 9. jshell (REPL)
+        //seccion 16. Module System. Java 9 introduced an abstraction layer on top of the packages which is known as
+        //Java Platform Module System. JDK itself is modularize and it's divided into more than 90 separate modules
+        //seccion 17, 18. Factory methods for collection. try-with-resources
+        //seccion 19. +Java 10. Type inference with var
+        //seccion 21. var with Lambda
+        //seccion 23. +Java 11. HttpClient
+        //Before Java11 developers had to use basic URLConnection
+        //or use third-party library such Apache HttpClient or OkHttp
+        //The new Java Http Cliente supports both HTTP/1.0 and HTTP/2
+        //seccion 24. +Java 12. switch expressions
+        //seccion 25. +Java 13. switch expressions with yield, multiline text blocks
     }
 
 }

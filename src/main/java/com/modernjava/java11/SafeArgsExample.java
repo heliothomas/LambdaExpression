@@ -1,5 +1,4 @@
-package com.modernjava.java9improvements;
-
+package com.modernjava.java11;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,12 +10,14 @@ public class SafeArgsExample {
             System.out.println(name);
         }
     }
+
     public static void main(String[] args) {
         SafeArgsExample safeArgsExample = new SafeArgsExample();
-        List<String> list = new ArrayList<String>();
+        List<String> list = new ArrayList();
         list.add("Syed");
         list.add("Mike");
         list.add("Jenny");
         safeArgsExample.print(list);
     }
+
 }
